@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로또 번호 추천</title>
+    <title>로또 & 동물상 테스트</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
     <div class="theme-switch-wrapper">
@@ -18,6 +20,22 @@
         <h1>로또 번호 추천</h1>
         <div id="lotto-container"></div>
         <button id="generate-btn">번호 생성하기</button>
+
+        <hr class="divider">
+
+        <div class="animal-test">
+            <h2>동물상 테스트 (강아지 vs 고양이)</h2>
+            <div id="upload-area" class="upload-area">
+                <p>사진을 업로드하거나 드래그하세요</p>
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <button id="upload-btn">사진 선택</button>
+            </div>
+            <div id="loading" class="hidden">모델 로딩 중...</div>
+            <div id="result-container" class="hidden">
+                <img id="face-image" src="" alt="Face Image">
+                <div id="label-container"></div>
+            </div>
+        </div>
 
         <hr class="divider">
 

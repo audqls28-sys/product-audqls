@@ -152,6 +152,100 @@ input:checked + .slider:before {
     opacity: 0.9;
 }
 
+.animal-test {
+    margin: 20px 0;
+}
+
+.upload-area {
+    border: 2px dashed var(--input-border);
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+.upload-area:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .upload-area:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.upload-area p {
+    margin-top: 0;
+    font-size: 14px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+#upload-btn {
+    padding: 8px 16px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#face-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-label {
+    width: 60px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bar-container {
+    flex-grow: 1;
+    height: 12px;
+    background-color: var(--input-border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background-color: var(--button-bg);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.percent {
+    width: 45px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--button-bg);
+}
+
 .divider {
     margin: 40px 0;
     border: 0;
