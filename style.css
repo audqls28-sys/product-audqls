@@ -6,6 +6,8 @@
     --button-text: #fff;
     --lotto-bg: #4CAF50;
     --lotto-text: #fff;
+    --input-bg: #fff;
+    --input-border: #ccc;
 }
 
 [data-theme="dark"] {
@@ -16,6 +18,8 @@
     --button-text: #fff;
     --lotto-bg: #008CBA;
     --lotto-text: #fff;
+    --input-bg: #444;
+    --input-border: #555;
 }
 
 body {
@@ -29,14 +33,16 @@ body {
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
     margin: 0;
+    padding: 40px 0;
 }
 
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 100;
 }
 
 .theme-switch-wrapper span {
@@ -100,6 +106,8 @@ input:checked + .slider:before {
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
+    width: 90%;
+    max-width: 500px;
 }
 
 #lotto-container {
@@ -141,5 +149,67 @@ input:checked + .slider:before {
 }
 
 #generate-btn:hover {
+    opacity: 0.9;
+}
+
+.divider {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid var(--input-border);
+    opacity: 0.5;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
     opacity: 0.9;
 }
